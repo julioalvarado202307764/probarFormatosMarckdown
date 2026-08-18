@@ -1,4 +1,3 @@
-```markdown
 # 📖 MANUAL TÉCNICO - CINEMA USAC (Fase 1)
 
 **Proyecto:** Sistema de Gestión de Cine - Fase 1
@@ -73,4 +72,4 @@ Para el desarrollo en Qt, se tomaron las siguientes decisiones de arquitectura v
 | `QStackedWidget` | Se utilizó para concentrar todos los paneles (Login, Administrador, Usuario) en una única ventana (`MainWindow`). Esto elimina la complejidad de instanciar múltiples ventanas `QDialog` o `QMainWindow` que podrían generar fugas de memoria o problemas de scope con los punteros globales de las estructuras. |
 | `QTabWidget` | Implementado dentro de los roles para subdividir módulos (Ej: Cartelera, Solicitudes, Promociones). Mejora la experiencia de usuario y aisla los componentes de entrada (como `QLineEdit` múltiples) previniendo lecturas cruzadas. |
 | **Población en Demanda** | Las tablas y listas de la interfaz se "dibujan" en memoria (`poblarTablaUI`) únicamente durante eventos críticos (Ej: clic en login, clic en aprobar solicitud), garantizando que el usuario siempre vea los datos respaldados en el backend C++. |
-```
+
