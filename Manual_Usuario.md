@@ -28,14 +28,14 @@ Para no perder tus estrategias:
 3. Elige la carpeta destino, escribe el nombre del archivo y presiona Guardar. 
 *Nota: El sistema asignará automáticamente la extensión `.btl` si no la incluyes.*
 
-![Captura del menú Guardar](ruta/a/tu/captura_guardar.png)
+![Captura del menú Guardar](docs/assets/captura_guardar.png)
 
 ### Abrir un Archivo Existente
 1. Ve a **Archivo > Abrir**.
 2. El explorador de archivos aplicará automáticamente un filtro para mostrarte únicamente los archivos válidos de BattleScript (`*.btl`).
 3. Selecciona tu archivo y su contenido se cargará inmediatamente en el área de edición.
 
-![Captura del menú Abrir](ruta/a/tu/captura_abrir.png)
+![Captura del menú Abrir](docs/assets/captura_abrir.png)
 
 ---
 
@@ -46,7 +46,7 @@ Una vez que hayas escrito o cargado tu código, es hora de poner a prueba el mot
 2. El motor leerá tu texto instantáneamente. 
 3. Revisa la **Consola de Salida** en la parte inferior. Si tu código es perfecto, verás un mensaje de éxito: `✅ ¡Análisis completado exitosamente!`.
 
-![Captura de Ejecución Exitosa](ruta/a/tu/captura_ejecucion_exitosa.png)
+![Captura de Ejecución Exitosa](docs/assets/captura_ejecucion_exitosa.png)
 
 ---
 
@@ -60,7 +60,7 @@ En el panel derecho, selecciona la pestaña **"Tokens"**. Si tu código no conti
 * Tipo (Acción, Reservada, Identificador, etc.)
 * Ubicación exacta (Línea y Columna)
 
-![Captura de la Tabla de Tokens](ruta/a/tu/captura_tokens.png)
+![Captura de la Tabla de Tokens](docs/assets/captura_tokens.png)
 
 ### Reporte de Errores (Léxicos y Sintácticos)
 ¿Cometiste un error? ¡No te preocupes! El IDE no se cerrará. Si ingresas un símbolo no válido (como `@` o `$`) o si olvidas una llave `}`, el sistema lo atrapará.
@@ -69,4 +69,4 @@ Ve a la pestaña **"Errores"** en el panel derecho. Aquí encontrarás una tabla
 * Una descripción detallada del problema.
 * La Línea y Columna exactas donde debes ir a corregirlo.
 
-![Captura de la Tabla de Errores](ruta/a/tu/captura_errores.png)
+![Captura de la Tabla de Errores](docs/assets/captura_errores.png)
