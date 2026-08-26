@@ -11,8 +11,7 @@ Al iniciar la aplicación, te encontrarás con una ventana maximizada dividida e
 2. **Panel de Reportes (Derecha):** Un sistema de pestañas (`Tokens` y `Errores`) que tabulará los resultados de tus análisis.
 3. **Consola de Salida (Abajo):** Una bitácora que te informará sobre el estado de la ejecución (éxito o advertencias).
 
-![Captura de la Interfaz Principal](ruta/a/tu/captura_interfaz.png)
-*(Nota: Inserta aquí una captura de tu ventana recién abierta y limpia)*
+![Captura de la Interfaz Principal](docs/assets/captura_interfaz.png)
 
 ---
 
@@ -62,7 +61,6 @@ En el panel derecho, selecciona la pestaña **"Tokens"**. Si tu código no conti
 * Ubicación exacta (Línea y Columna)
 
 ![Captura de la Tabla de Tokens](ruta/a/tu/captura_tokens.png)
-*(Nota: Inserta aquí una captura mostrando la tabla llena con tokens de una estrategia válida)*
 
 ### Reporte de Errores (Léxicos y Sintácticos)
 ¿Cometiste un error? ¡No te preocupes! El IDE no se cerrará. Si ingresas un símbolo no válido (como `@` o `$`) o si olvidas una llave `}`, el sistema lo atrapará.
@@ -72,4 +70,3 @@ Ve a la pestaña **"Errores"** en el panel derecho. Aquí encontrarás una tabla
 * La Línea y Columna exactas donde debes ir a corregirlo.
 
 ![Captura de la Tabla de Errores](ruta/a/tu/captura_errores.png)
-*(Nota: Inserta aquí una captura forzando un error sintáctico o léxico para mostrar cómo se llena esta tabla)*
