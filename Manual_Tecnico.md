@@ -40,7 +40,5 @@ Gestor principal del entorno visual. Hereda de `JFrame`.
 * `ejecutarAnalisis()`: Método puente que extrae el texto del área de código, instancia los analizadores y atrapa excepciones generales para mantener viva la aplicación (tolerancia a fallos).
 * `abrirArchivo()` / `guardarArchivo()`: Implementan `JFileChooser` manejando flujos de I/O mediante `BufferedReader` y `FileWriter`.
 
----
-
 ### Modelos de Datos (`TokenInfo` y `ErrorInfo`)
 Clases tipo POJO (*Plain Old Java Object*) que actúan como estructuras de almacenamiento. Permiten desacoplar la generación de datos en los analizadores de su renderizado en las tablas dinámicas de Swing.
