@@ -44,7 +44,7 @@ Una vez que hayas escrito o cargado tu código, es hora de poner a prueba el mot
 
 1. Dirígete a la barra de menú superior y haz clic en **Ejecutar > Analizar Código**.
 2. El motor leerá tu texto instantáneamente. 
-3. Revisa la **Consola de Salida** en la parte inferior. Si tu código es perfecto, verás un mensaje de éxito: `✅ ¡Análisis completado exitosamente!`.
+3. Revisa la **Consola de Salida** en la parte inferior. Si tu código es perfecto, verás un mensaje de éxito: ` ¡Análisis completado exitosamente!`.
 
 ![Captura de Ejecución Exitosa](docs/assets/captura_ejecucion_exitosa.png)
 
