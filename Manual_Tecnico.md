@@ -42,3 +42,43 @@ Gestor principal del entorno visual. Hereda de `JFrame`.
 
 ### Modelos de Datos (`TokenInfo` y `ErrorInfo`)
 Clases tipo POJO (*Plain Old Java Object*) que actúan como estructuras de almacenamiento. Permiten desacoplar la generación de datos en los analizadores de su renderizado en las tablas dinámicas de Swing.
+
+## 5. Funcionamiento del Motor de Análisis
+
+### Analizador Léxico (JFlex)
+El archivo `Lexer.jflex` se encarga de leer la cadena de caracteres de entrada y agruparlos en unidades con significado (Tokens).
+
+* **Gestión de Estados:** Utiliza estados exclusivos como `<MULTILINE_COMMENT>` para manejar la ignorancia de bloques de texto que no deben ser analizados.
+* **Interceptación:** En lugar de retornar directamente los símbolos a CUP, utiliza un método propio `token(int tipoSym, String nombreTipo, Object valor)` que inyecta cada token válido en una lista dinámica (`listaTokens`) antes de enviarlo al parser.
+* **Recuperación de Errores:** Posee una regla "catch-all" `[^]` al final del estado `<YYINITIAL>` que captura caracteres no reconocidos, agregándolos a `listaErrores` en lugar de detener la ejecución.
+
+---
+
+### Analizador Sintáctico (CUP)
+El archivo `Parser.cup` valida que la secuencia de tokens provista por el Lexer forme estructuras gramaticales válidas según el lenguaje BattleScript.
+
+* **Resolución de Ambigüedades:** Emplea declaraciones de precedencia (`precedence left OR, AND...`) para garantizar la construcción correcta de expresiones lógicas y matemáticas.
+* **Reglas Gramaticales:** Construidas en formato BNF subyacente. Define estructuras jerárquicas complejas como `estrategia`, `partida` y el bloque `main`.
+* **Manejo de Pánico:** Se sobreescribieron los métodos nativos `syntax_error(Symbol s)` y `unrecovered_syntax_error(Symbol s)` para interceptar tokens inesperados y almacenarlos en `listaErroresSintacticos`, permitiendo reportarlos en la interfaz gráfica.
+
+---
+
+### Flujo de Ejecución del Motor
+
+1. **Lectura:** El código fuente en texto plano se envuelve en un `StringReader`.
+2. **Tokenización:** El objeto `Lexer` procesa el texto bajo demanda de CUP, llenando silenciosamente las listas de Tokens e Errores Léxicos.
+3. **Parseo:** El objeto `Parser` solicita tokens al Lexer, arma el árbol de validación y atrapa fallos sintácticos en su lista de Errores Sintácticos.
+4. **Reporte:** La interfaz iterará sobre estas listas (independientemente de si el parser lanzó un error fatal interno encapsulado en el `try-catch` del hilo de Swing) y poblará el modelo de las tablas visuales usando `DefaultTableModel.addRow()`.
+
+
+
+
+
+
+
+
+
+
+
+
+
