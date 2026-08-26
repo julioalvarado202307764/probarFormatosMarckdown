@@ -30,3 +30,17 @@ El proyecto sigue el patrón de diseño arquitectónico que separa la interfaz g
  │
  └── 📁 proyecto1.interfaz/            (Interfaz Gráfica)
       └── 📄 VentanaPrincipal.java     (Lógica y maquetación visual del IDE)
+```
+## 4. Clases y Métodos Principales
+
+### `VentanaPrincipal.java`
+Gestor principal del entorno visual. Hereda de `JFrame`.
+
+* `inicializarComponentes()`: Construye dinámicamente el árbol de componentes de Swing (Barra de menús, JTabbedPane, JTables, JScrollPanes) y configura los layouts responsivos.
+* `ejecutarAnalisis()`: Método puente que extrae el texto del área de código, instancia los analizadores y atrapa excepciones generales para mantener viva la aplicación (tolerancia a fallos).
+* `abrirArchivo()` / `guardarArchivo()`: Implementan `JFileChooser` manejando flujos de I/O mediante `BufferedReader` y `FileWriter`.
+
+---
+
+### Modelos de Datos (`TokenInfo` y `ErrorInfo`)
+Clases tipo POJO (*Plain Old Java Object*) que actúan como estructuras de almacenamiento. Permiten desacoplar la generación de datos en los analizadores de su renderizado en las tablas dinámicas de Swing.
