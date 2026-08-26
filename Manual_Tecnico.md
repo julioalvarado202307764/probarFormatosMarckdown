@@ -70,6 +70,14 @@ El archivo `Parser.cup` valida que la secuencia de tokens provista por el Lexer 
 3. **Parseo:** El objeto `Parser` solicita tokens al Lexer, arma el árbol de validación y atrapa fallos sintácticos en su lista de Errores Sintácticos.
 4. **Reporte:** La interfaz iterará sobre estas listas (independientemente de si el parser lanzó un error fatal interno encapsulado en el `try-catch` del hilo de Swing) y poblará el modelo de las tablas visuales usando `DefaultTableModel.addRow()`.
 
+## 6. Guía de Mantenimiento Futuro
+
+Para agregar nuevas palabras reservadas, funciones u operadores al lenguaje:
+
+1. **Modificar exclusivamente** los archivos fuente `Lexer.jflex` (para reconocer el nuevo token) y `Parser.cup` (para integrarlo a la gramática).
+2. **Jamás** modificar manualmente los archivos `Lexer.java`, `Parser.java` o `sym.java`.
+3. Ejecutar la clase `Generador.java` para que reescriba los analizadores.
+4. Correr la aplicación desde `Proyecto1.java` para probar los cambios en el IDE.
 
 
 
