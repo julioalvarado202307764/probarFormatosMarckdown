@@ -86,7 +86,6 @@ Underdog -> Vida: 0 | Recurso: 0 | Puntos: 494
 👑 GANADOR: Executioner!
 ```
 
-*(Captura pendiente — agrega aquí una imagen real de tu consola tras ejecutar una partida)*
 ![Captura del resultado de una batalla](assets/captura_resultado_batalla.png)
 
 Cada línea de ronda muestra la acción que eligió cada jugador según sus reglas (`if`/`then`/`else`) y el estado actual de la partida. Debajo de una ronda pueden aparecer mensajes adicionales:
