@@ -62,17 +62,28 @@ Por cada partida que se ejecuta, la consola muestra un encabezado con el nombre 
 
 ```
 =========================================
-🏆 PARTIDA: DueloInicial
+🏆 PARTIDA: PruebaGanadorFinal
 =========================================
-Ronda 1: Merlin (ARCANE_BOLT) vs Ragnar (SLASH)
-Ronda 2: Merlin (ARCANE_BOLT) vs Ragnar (SLASH)
-   🔥 ¡Merlin conectó su COMBO!
-Ronda 3: Merlin (FIREBALL) vs Ragnar (HEAVY_STRIKE)
-   🛡️ Ragnar bloqueó el 50% del daño.
+Ronda 1: Executioner (SLASH) vs Underdog (SLASH)
+Ronda 2: Executioner (SLASH) vs Underdog (SLASH)
+Ronda 3: Executioner (SLASH) vs Underdog (SLASH)
+Ronda 4: Executioner (SLASH) vs Underdog (HEAVY_STRIKE)
+   🔥 ¡Underdog conectó su COMBO!
+Ronda 5: Executioner (SLASH) vs Underdog (SLASH)
+Ronda 6: Executioner (SLASH) vs Underdog (SLASH)
+Ronda 7: Executioner (SLASH) vs Underdog (HEAVY_STRIKE)
+   🔥 ¡Underdog conectó su COMBO!
+Ronda 8: Executioner (SLASH) vs Underdog (SLASH)
+   ⚠️ Underdog no tiene energía/maná para usar SLASH!
+Ronda 9: Executioner (SLASH) vs Underdog (SLASH)
+   ⚠️ Underdog no tiene energía/maná para usar SLASH!
+Ronda 10: Executioner (SLASH) vs Underdog (HEAVY_STRIKE)
+   ⚠️ Underdog no tiene energía/maná para usar HEAVY_STRIKE!
+
 --- RESULTADO FINAL ---
-Merlin -> Vida: 74 | Recurso: 60 | Puntos: 182
-Ragnar -> Vida: 21 | Recurso: 45 | Puntos: 96
-👑 GANADOR: Merlin!
+Executioner -> Vida: 16 | Recurso: 0 | Puntos: 265
+Underdog -> Vida: 0 | Recurso: 0 | Puntos: 494
+👑 GANADOR: Executioner!
 ```
 
 *(Captura pendiente — agrega aquí una imagen real de tu consola tras ejecutar una partida)*
